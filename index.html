@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crumb & Craft Bakery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFF0F5] text-stone-700 font-sans selection:bg-rose-200 min-h-screen relative overflow-x-hidden">
+  
+  <!-- Cutesy Floating Background Elements -->
+  <div class="fixed top-24 left-1/4 text-3xl opacity-40 pointer-events-none animate-bounce" style="animation-duration: 4s">🌸</div>
+  <div class="fixed top-1/3 left-12 text-2xl opacity-30 pointer-events-none animate-bounce" style="animation-duration: 5s; animation-delay: 1s">✨</div>
+  <div class="fixed top-1/2 right-20 text-3xl opacity-40 pointer-events-none animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.5s">🌼</div>
+  <div class="fixed bottom-1/3 right-10 text-4xl opacity-30 pointer-events-none animate-bounce" style="animation-duration: 6s; animation-delay: 2s">🥐</div>
+  <div class="fixed bottom-20 left-16 text-3xl opacity-30 pointer-events-none animate-bounce" style="animation-duration: 5.5s; animation-delay: 1.5s">🍞</div>
+ <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b-2 border-rose-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      
+      <!-- Brand Logo / Title -->
+      <a href="index.html" class="flex items-center gap-3">
+        <!-- Desktop Logo Image -->
+        <img src="logo.png" alt="Crumb & Craft Bakery" class="h-16 md:h-20 w-auto object-contain">
+      </a>
+
+      <!-- Right Side Actions & Menu Button -->
+      <div class="flex items-center gap-3">
+        <!-- Cart Button Trigger -->
+        <button onclick="toggleCart()" class="relative bg-rose-100 hover:bg-rose-200 text-rose-800 px-3.5 py-2 rounded-2xl font-bold text-sm flex items-center gap-2 transition-all shadow-xs cursor-pointer">
+          <svg class="w-4 h-4 text-rose-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="text-xs sm:text-sm">Cart</span>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold" style="display: none;">0</span>
+        </button>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex gap-6 text-sm font-bold text-rose-800 ml-3">
+          <a href="index.html" class="hover:text-rose-500 transition-colors">Shop</a>
+          <a href="about.html" class="hover:text-rose-500 transition-colors">About</a>
+          <a href="menu.html" class="hover:text-rose-500 transition-colors">Our Breads</a>
+          <a href="visit.html" class="hover:text-rose-500 transition-colors">Visit Us</a>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden text-rose-800 p-2 rounded-xl bg-rose-50 hover:bg-rose-100 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b-2 border-rose-100 px-6 py-5 space-y-3 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-bold text-rose-800 text-base">
+        <a href="index.html" class="hover:text-rose-500 transition-colors py-1">Shop</a>
+        <a href="about.html" class="hover:text-rose-500 transition-colors py-1">About</a>
+        <a href="menu.html" class="hover:text-rose-500 transition-colors py-1">Our Breads</a>
+        <a href="visit.html" class="hover:text-rose-500 transition-colors py-1">Visit Us</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#FFF0F5] via-[#FFF8F0] to-[#FFF0F5] py-16 px-4 text-center">
+    <div class="max-w-3xl mx-auto relative z-10">
+      <div class="inline-block mb-4 px-4 py-1 bg-white/70 backdrop-blur-sm rounded-full text-xs font-semibold text-rose-500 border border-rose-100 shadow-xs">
+        ✨ freshly baked with love ✨
+      </div>
+      <h2 class="text-4xl md:text-6xl font-extrabold text-rose-900 mb-4 leading-tight" style="font-family: serif;">
+        Slow Fermented,<br/>
+        <span class="text-amber-500">Small Batch,</span><br/>
+        &amp; Sourdough.
+      </h2>
+      <p class="text-rose-600 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed">
+        Every loaf is hand kneaded, naturally leavened, and baked in our tiny wood fire oven. No shortcuts, no additives. Just lots of flour, water, salt, and patience! 🌸
+      </p>
+
+      <!-- Feature Badges -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <div class="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-rose-100 text-xs font-bold text-rose-700 shadow-xs">
+          <span>🌿</span> Organic Ingredients
+        </div>
+        <div class="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-rose-100 text-xs font-bold text-rose-700 shadow-xs">
+          <span>⏰</span> 24-72 Hour Ferment
+        </div>
+        <div class="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full border border-rose-100 text-xs font-bold text-rose-700 shadow-xs">
+          <span>♡</span> Local &amp; Sustainable
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 pb-20">
+    <div id="category-filters" class="flex flex-wrap justify-center gap-3 mb-12"></div>
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </main>
+
+  <!-- Flower Divider -->
+  <div class="flower-divider">
+    <hr>
+    <span>✿</span>
+    <hr>
+  </div>
+
+<!-- Footer -->
+  <footer class="bakery-footer">
+    <div class="footer-container">
+      
+      <!-- Brand Logo Column -->
+      <div class="footer-column brand-col">
+        <div class="footer-logo mb-3">
+          <img src="footer-logo.png" alt="Crumb & Craft Bakery" class="h-[150px] w-auto object-contain">
+        </div>
+          </div>
+      
+      <div class="footer-column hours-col">
+        <h3 class="font-extrabold text-lg">Hours</h3>
+        <ul>
+          <li><span class="day">Wed – Fri</span> <span class="highlight">7am – 2pm</span></li>
+          <li><span class="day">Sat – Sun</span> <span class="highlight">8am – 3pm</span></li>
+          <li><span class="day">Mon – Tue</span> <span class="closed">closed for rest</span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column location-col">
+        <h3 class="font-extrabold text-lg">Find Us</h3>
+        <p>Farmers Market Pavilion</p>
+        <p>Stall #12, Oakwood Square</p>
+        <p class="highlight pre-order">pre-orders welcome! ♡</p>
+      </div>
+
+    </div>
+<div class="footer-bottom">
+      <p>made with flour, water, salt & love ~</p>
+      <p class="text-[10px] text-rose-400 mt-1 opacity-75">portfolio mock-up site by Stephanie Krueger</p>
+    </div>
+
+  <!-- Cart Drawer Overlay -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="absolute inset-0 bg-rose-900/20 backdrop-blur-sm" onclick="toggleCart()"></div>
+    <div id="cart-sidebar" class="absolute right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl border-l-4 border-rose-100 transform translate-x-full transition-transform duration-300 flex flex-col">
+      <div class="p-6 border-b-2 border-rose-50 flex justify-between items-center bg-rose-50/30">
+        <h2 class="text-xl font-extrabold text-rose-800" style="font-family: serif;">Your Basket</h2>
+        <button onclick="toggleCart()" class="text-rose-400 font-bold hover:text-rose-600">✕</button>
+      </div>
+      
+      <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+
+      <div id="cart-footer" class="p-6 border-t-2 border-rose-50 bg-rose-50/50 hidden">
+        <div class="flex justify-between mb-4 font-extrabold">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="text-rose-700">$0.00</span>
+        </div>
+        <button id="checkout-btn" onclick="handleCheckout()" class="w-full bg-rose-400 hover:bg-rose-500 text-white font-extrabold py-3.5 rounded-2xl shadow-lg transition-all cursor-pointer">
+          Place Pre-Order ♡
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

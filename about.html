@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Crumb & Craft Bakery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFF0F5] text-stone-700 font-sans selection:bg-rose-200 min-h-screen relative overflow-x-hidden">
+  
+  <!-- Floating Background Elements -->
+  <div class="fixed top-24 left-1/4 text-3xl opacity-40 pointer-events-none animate-bounce" style="animation-duration: 4s">🌾</div>
+  <div class="fixed top-1/3 right-16 text-3xl opacity-40 pointer-events-none animate-bounce" style="animation-duration: 4.5s; animation-delay: 0.5s">🌸</div>
+
+   <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b-2 border-rose-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      
+      <!-- Brand Logo / Title -->
+      <a href="index.html" class="flex items-center gap-3">
+        <!-- Desktop Logo Image -->
+        <img src="logo.png" alt="Crumb & Craft Bakery" class="h-16 md:h-20 w-auto object-contain">
+      </a>
+
+      <!-- Right Side Actions & Menu Button -->
+      <div class="flex items-center gap-3">
+        <!-- Cart Button Trigger -->
+        <button onclick="toggleCart()" class="relative bg-rose-100 hover:bg-rose-200 text-rose-800 px-3.5 py-2 rounded-2xl font-bold text-sm flex items-center gap-2 transition-all shadow-xs cursor-pointer">
+          <svg class="w-4 h-4 text-rose-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="text-xs sm:text-sm">Cart</span>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold" style="display: none;">0</span>
+        </button>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex gap-6 text-sm font-bold text-rose-800 ml-3">
+          <a href="index.html" class="hover:text-rose-500 transition-colors">Shop</a>
+          <a href="about.html" class="hover:text-rose-500 transition-colors">About</a>
+          <a href="menu.html" class="hover:text-rose-500 transition-colors">Our Breads</a>
+          <a href="visit.html" class="hover:text-rose-500 transition-colors">Visit Us</a>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden text-rose-800 p-2 rounded-xl bg-rose-50 hover:bg-rose-100 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b-2 border-rose-100 px-6 py-5 space-y-3 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-bold text-rose-800 text-base">
+        <a href="index.html" class="hover:text-rose-500 transition-colors py-1">Shop</a>
+        <a href="about.html" class="hover:text-rose-500 transition-colors py-1">About</a>
+        <a href="menu.html" class="hover:text-rose-500 transition-colors py-1">Our Breads</a>
+        <a href="visit.html" class="hover:text-rose-500 transition-colors py-1">Visit Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4">
+    <div class="inline-block mb-3 px-4 py-1 bg-white/70 backdrop-blur-sm rounded-full text-xs font-semibold text-rose-500 border border-rose-100 shadow-xs">
+      ✨ our little origin story ✨
+    </div>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-rose-900 mb-4" style="font-family: serif;">Flour, Water, &amp; Endless Patience</h2>
+    <p class="text-rose-600 text-base max-w-xl mx-auto">How a quiet kitchen obsession turned into a neighborhood micro-bakery.</p>
+  </section>
+
+  <!-- Main Story Content -->
+  <main class="max-w-4xl mx-auto px-4 pb-20">
+    <div class="bg-white rounded-3xl shadow-sm border-2 border-rose-50 p-8 md:p-12 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-extrabold text-rose-800 mb-4" style="font-family: serif;">Meet "Penelope"</h3>
+          <p class="text-stone-500 text-sm leading-relaxed mb-4">
+            Every loaf at Crumb &amp; Craft is leavened by Penelope, a wild yeast culture fed daily with organic unbleached flour and filtered spring water since 2022. No commercial yeasts allowed here!
+          </p>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            We believe that slow fermentation isn't just a baking technique, it's a way to slow down. Our dough rests for up to 72 hours, developing complex flavors and a bubbly, open crumb that is exceptionally gentle on the tummy. 🤍
+          </p>
+        </div>
+<div class="h-72 bg-gradient-to-br from-rose-100 to-orange-100 rounded-2xl overflow-hidden shadow-inner relative flex items-center justify-center">
+  <img src="images/sourdough-starter.jpg" alt="Sourdough Starter" class="h-full w-full object-cover">
+</div>
+      </div>
+    </div>
+
+    <!-- Meet the Baker Card Section -->
+    <div class="bg-gradient-to-br from-rose-50 via-white to-orange-50 rounded-3xl shadow-sm border-2 border-rose-100 p-8 md:p-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="flex justify-center">
+          <div class="w-40 h-40 bg-gradient-to-tr from-rose-300 to-amber-200 rounded-full overflow-hidden shadow-md border-4 border-white rotate-2 flex items-center justify-center">
+            <img src="images/stephanie.jpg" alt="Stephanie, Head Baker & Founder" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="md:col-span-2 text-center md:text-left">
+          <span class="text-xs font-bold text-rose-400 tracking-widest uppercase mb-1 block">Head Baker &amp; Founder</span>
+          <h3 class="text-3xl font-extrabold text-rose-900 mb-3" style="font-family: serif;">Hi, I'm Stephanie! ♡</h3>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">
+            What started as late-night stress baking during a search for wholesome, gut-friendly food quickly blossomed into a full-blown passion for ancient grains and wild fermentation. 
+          </p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            When I'm not nursing my starter or sliding loaves into the oven at the crack of dawn, you can find me designing digital experiences or hanging out at the local weekend farmers market. Come say hi at Stall #12! 🌾
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The 4-Step Process Section -->
+    <div class="text-center mb-10">
+      <span class="text-3xl mb-2 block">🥖</span>
+      <h3 class="text-3xl font-extrabold text-rose-800" style="font-family: serif;">The Craft Behind the Crust</h3>
+      <p class="text-rose-400 text-sm mt-1">from grain to golden brown</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div class="bg-white p-6 rounded-3xl border-2 border-rose-50 shadow-sm text-center">
+        <div class="text-3xl mb-3">🌾</div>
+        <h4 class="font-bold text-rose-800 mb-1">The Feed</h4>
+        <p class="text-xs text-stone-400">Penelope is fed and pampered until she's bubbly, active, and bursting with wild yeast.</p>
+      </div>
+      <div class="bg-white p-6 rounded-3xl border-2 border-rose-50 shadow-sm text-center">
+        <div class="text-3xl mb-3">🥣</div>
+        <h4 class="font-bold text-rose-800 mb-1">Hand Mixing</h4>
+        <p class="text-xs text-stone-400">Flour, water, and sea salt are gently hand-mixed. No automated machinery or chemical additives.</p>
+      </div>
+      <div class="bg-white p-6 rounded-3xl border-2 border-rose-50 shadow-sm text-center">
+        <div class="text-3xl mb-3">⏰</div>
+        <h4 class="font-bold text-rose-800 mb-1">Long Cold Ferment</h4>
+        <p class="text-xs text-stone-400">The dough undergoes a slow 48-to-72 hour cold retard in the fridge for maximum flavor development.</p>
+      </div>
+      <div class="bg-white p-6 rounded-3xl border-2 border-rose-50 shadow-sm text-center">
+        <div class="text-3xl mb-3">🔥</div>
+        <h4 class="font-bold text-rose-800 mb-1">Wood-Fired Bake</h4>
+        <p class="text-xs text-stone-400">Baked scorching hot to achieve our signature crackling, blistered dark crust and soft interior.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Flower Divider -->
+  <div class="flower-divider">
+    <hr>
+    <span>✿</span>
+    <hr>
+  </div>
+
+<!-- Footer -->
+  <footer class="bakery-footer">
+    <div class="footer-container">
+      
+      <!-- Brand Logo Column -->
+      <div class="footer-column brand-col">
+        <div class="footer-logo mb-3">
+          <img src="footer-logo.png" alt="Crumb & Craft Bakery" class="h-[150px] w-auto object-contain">
+        </div>
+          </div>
+      
+      <div class="footer-column hours-col">
+        <h3 class="font-extrabold text-lg">Hours</h3>
+        <ul>
+          <li><span class="day">Wed – Fri</span> <span class="highlight">7am – 2pm</span></li>
+          <li><span class="day">Sat – Sun</span> <span class="highlight">8am – 3pm</span></li>
+          <li><span class="day">Mon – Tue</span> <span class="closed">closed for rest</span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column location-col">
+        <h3 class="font-extrabold text-lg">Find Us</h3>
+        <p>Farmers Market Pavilion</p>
+        <p>Stall #12, Oakwood Square</p>
+        <p class="highlight pre-order">pre-orders welcome! ♡</p>
+      </div>
+
+    </div>
+<div class="footer-bottom">
+      <p>made with flour, water, salt & love ~</p>
+      <p class="text-[10px] text-rose-400 mt-1 opacity-75">portfolio mock-up site by Stephanie Krueger</p>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

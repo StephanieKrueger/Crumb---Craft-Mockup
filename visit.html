@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Us | Crumb & Craft Bakery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFF0F5] text-stone-700 font-sans selection:bg-rose-200 min-h-screen relative overflow-x-hidden">
+  
+  <!-- Floating Background Elements -->
+  <div class="fixed top-24 right-1/4 text-3xl opacity-40 pointer-events-none animate-bounce" style="animation-duration: 4.2s">📍</div>
+  <div class="fixed bottom-1/4 left-12 text-3xl opacity-40 pointer-events-none animate-bounce" style="animation-duration: 5s; animation-delay: 0.8s">🌿</div>
+
+ <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b-2 border-rose-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      
+      <!-- Brand Logo / Title -->
+      <a href="index.html" class="flex items-center gap-3">
+        <!-- Desktop Logo Image -->
+        <img src="logo.png" alt="Crumb & Craft Bakery" class="h-16 md:h-20 w-auto object-contain">
+      </a>
+
+      <!-- Right Side Actions & Menu Button -->
+      <div class="flex items-center gap-3">
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex gap-6 text-sm font-bold text-rose-800 ml-3">
+          <a href="index.html" class="hover:text-rose-500 transition-colors">Shop</a>
+          <a href="about.html" class="hover:text-rose-500 transition-colors">About</a>
+          <a href="menu.html" class="hover:text-rose-500 transition-colors">Our Breads</a>
+          <a href="visit.html" class="hover:text-rose-500 transition-colors">Visit Us</a>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden text-rose-800 p-2 rounded-xl bg-rose-50 hover:bg-rose-100 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b-2 border-rose-100 px-6 py-5 space-y-3 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-bold text-rose-800 text-base">
+        <a href="index.html" class="hover:text-rose-500 transition-colors py-1">Shop</a>
+        <a href="about.html" class="hover:text-rose-500 transition-colors py-1">About</a>
+        <a href="menu.html" class="hover:text-rose-500 transition-colors py-1">Our Breads</a>
+        <a href="visit.html" class="hover:text-rose-500 transition-colors py-1">Visit Us</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4">
+    <div class="inline-block mb-3 px-4 py-1 bg-white/70 backdrop-blur-sm rounded-full text-xs font-semibold text-rose-500 border border-rose-100 shadow-xs">
+      ✨ come say hello ✨
+    </div>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-rose-900 mb-4" style="font-family: serif;">Find Us at the Market</h2>
+    <p class="text-rose-600 text-base max-w-xl mx-auto">We operate out of our cheerful outdoor stand every Wednesday through Sunday.</p>
+  </section>
+
+  <!-- Visit Content Container -->
+  <main class="max-w-4xl mx-auto px-4 pb-20 space-y-12">
+
+    <!-- Location & Hours Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Card 1: Stand Location -->
+      <div class="bg-white rounded-3xl p-8 border-2 border-rose-50 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">📍</span>
+            <h3 class="text-2xl font-extrabold text-rose-800" style="font-family: serif;">Market Stand</h3>
+          </div>
+          <p class="text-stone-500 text-sm mb-6 leading-relaxed">
+            Find our canopy tent decked out with fresh flowers and cooling racks filled with warm bread. We are located right in the heart of the community square.
+          </p>
+          <div class="space-y-3 bg-rose-50/50 p-4 rounded-2xl text-xs font-medium text-stone-600 mb-6">
+            <p><strong class="text-rose-700">Location:</strong> Farmers Market Pavilion, Stall #12</p>
+            <p><strong class="text-rose-700">Address:</strong> 420 Oakwood Square, North District</p>
+            <p><strong class="text-rose-700">Parking:</strong> Free parking available in the main plaza lot</p>
+          </div>
+        </div>
+        <a href="https://maps.google.com" target="_blank" class="block text-center bg-rose-100 hover:bg-rose-200 text-rose-800 font-extrabold py-3 rounded-2xl text-sm transition-colors">
+          Open in Google Maps 🗺️
+        </a>
+      </div>
+
+      <!-- Card 2: Schedule & Hours -->
+      <div class="bg-white rounded-3xl p-8 border-2 border-rose-50 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">⏰</span>
+            <h3 class="text-2xl font-extrabold text-rose-800" style="font-family: serif;">Operating Hours</h3>
+          </div>
+          <p class="text-stone-500 text-sm mb-6 leading-relaxed">
+            We bake in small, continuous batches throughout the morning. Once a batch sells out for the day, it's gone! Coming early ensures the widest selection.
+          </p>
+          <ul class="space-y-2.5 text-xs font-medium text-stone-600 bg-rose-50/50 p-4 rounded-2xl mb-6">
+            <li class="flex justify-between"><span>Wednesday – Friday:</span> <strong class="text-rose-700">7:00 AM – 2:00 PM</strong></li>
+            <li class="flex justify-between"><span>Saturday – Sunday:</span> <strong class="text-rose-700">8:00 AM – 3:00 PM</strong></li>
+            <li class="flex justify-between border-t border-rose-200/50 pt-2"><span>Monday – Tuesday:</span> <span class="text-stone-400 italic">Closed for resting &amp; feeding</span></li>
+          </ul>
+        </div>
+        <div class="text-center bg-amber-50 text-amber-800 text-xs font-bold py-3 rounded-2xl border border-amber-200">
+          💡 Tip: Pre-orders are held at Stall #12 until 11 AM!
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ / Pick-up Instructions -->
+    <div class="bg-white rounded-3xl p-8 md:p-12 border-2 border-rose-50 shadow-sm">
+      <div class="text-center max-w-lg mx-auto mb-8">
+        <span class="text-3xl mb-2 block">💌</span>
+        <h3 class="text-2xl font-extrabold text-rose-800" style="font-family: serif;">Pre-Order &amp; Market FAQ</h3>
+        <p class="text-stone-400 text-xs mt-1">Everything you need to know about grabbing your goods</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+        <div class="bg-rose-50/30 p-5 rounded-2xl border border-rose-100/60">
+          <h4 class="font-bold text-rose-900 text-sm mb-1">How do online pre-orders work?</h4>
+          <p class="text-xs text-stone-500 leading-relaxed">Simply select your favorite loaves on our shop page, check out online, and choose your preferred pickup morning. Just show your confirmation text at Stall #12!</p>
+        </div>
+        <div class="bg-rose-50/30 p-5 rounded-2xl border border-rose-100/60">
+          <h4 class="font-bold text-rose-900 text-sm mb-1">Do you accept walk-ups?</h4>
+          <p class="text-xs text-stone-500 leading-relaxed">Yes! We always save a portion of each batch for walk-up visitors, though our specialty items tend to sell out quickly on weekend mornings.</p>
+        </div>
+        <div class="bg-rose-50/30 p-5 rounded-2xl border border-rose-100/60">
+          <h4 class="font-bold text-rose-900 text-sm mb-1">Are your loaves sliced?</h4>
+          <p class="text-xs text-stone-500 leading-relaxed">To preserve freshness, moisture, and crisp crusts, we keep all our sourdough loaves whole. Feel free to ask if you'd like us to slice it at the stand!</p>
+        </div>
+        <div class="bg-rose-50/30 p-5 rounded-2xl border border-rose-100/60">
+          <h4 class="font-bold text-rose-900 text-sm mb-1">Can I order for private events?</h4>
+          <p class="text-xs text-stone-500 leading-relaxed">We love handling custom orders for weddings, local cafes, and dinner parties! Shoot us an email or reach out on Instagram to chat about custom bakes.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Flower Divider -->
+  <div class="flower-divider">
+    <hr>
+    <span>✿</span>
+    <hr>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bakery-footer">
+    <div class="footer-container">
+      
+      <!-- Brand Logo Column -->
+      <div class="footer-column brand-col">
+        <div class="footer-logo mb-3">
+          <img src="footer-logo.png" alt="Crumb & Craft Bakery" class="h-[150px] w-auto object-contain">
+        </div>
+          </div>
+      
+      <div class="footer-column hours-col">
+        <h3 class="font-extrabold text-lg">Hours</h3>
+        <ul>
+          <li><span class="day">Wed – Fri</span> <span class="highlight">7am – 2pm</span></li>
+          <li><span class="day">Sat – Sun</span> <span class="highlight">8am – 3pm</span></li>
+          <li><span class="day">Mon – Tue</span> <span class="closed">closed for rest</span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column location-col">
+        <h3 class="font-extrabold text-lg">Find Us</h3>
+        <p>Farmers Market Pavilion</p>
+        <p>Stall #12, Oakwood Square</p>
+        <p class="highlight pre-order">pre-orders welcome! ♡</p>
+      </div>
+
+    </div>
+<div class="footer-bottom">
+      <p>made with flour, water, salt & love ~</p>
+      <p class="text-[10px] text-rose-400 mt-1 opacity-75">portfolio mock-up site by Stephanie Krueger</p>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

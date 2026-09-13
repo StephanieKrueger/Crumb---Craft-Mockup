@@ -1,0 +1,90 @@
+/* 1. Global Cutesy Background */
+body {
+    background-color: #FFF0F5; /* Matches the soft pink in the mockup */
+    font-family: 'Nunito', sans-serif; 
+}
+
+/* 2. Flower Divider */
+.flower-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    color: #f78da7; 
+}
+
+.flower-divider hr {
+    width: 250px;
+    border: none;
+    border-top: 1px solid #f9d3db;
+    margin: 0 15px;
+}
+
+/* 3. Footer Layout & Typography */
+.bakery-footer {
+    background-color: #ffffff;
+    padding: 60px 20px 30px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #8a2a3b; /* Deep ruby red */
+    margin-bottom: 15px;
+}
+
+.footer-column h3 {
+    color: #8a2a3b;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-column p, .hours-col ul {
+    color: #999999;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.hours-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.hours-col li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.highlight {
+    color: #ff6b8b; /* Bright pink/red text */
+}
+
+.closed {
+    color: #d3d3d3;
+}
+
+.pre-order {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    color: #d3d3d3;
+    font-size: 0.85rem;
+}
